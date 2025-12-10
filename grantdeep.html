@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Angeles County Grant Deed Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section {
+            border: 1px solid #000;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        input[type="text"], input[type="date"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+        .field-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .field-group > div {
+            flex: 1;
+        }
+        .field-full {
+            grid-column: 1 / -1;
+        }
+        .small-label {
+            font-size: 0.8em;
+            margin-top: -5px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .recorder-space {
+            border: 1px solid #000;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+
+    <div class="recorder-space">
+        [cite_start]Above Space for Recorder's Use Only [cite: 8]
+    </div>
+
+    <form>
+        <div class="section">
+            <div class="field-group">
+                <div style="flex: 2;">
+                    [cite_start]<label for="recorded-by">Recording Requested By: [cite: 1]</label>
+                    <input type="text" id="recorded-by">
+                </div>
+                <div style="flex: 3;">
+                    [cite_start]<label for="mail-to">When recorded mail document to: [cite: 2]</label>
+                    [cite_start]<input type="text" id="mail-to" placeholder="NAME [cite: 3]">
+                </div>
+            </div>
+            <div class="field-group">
+                <div style="flex: 3;">
+                    [cite_start]<input type="text" placeholder="ADDRESS [cite: 4]">
+                </div>
+                <div style="flex: 2;">
+                    [cite_start]<input type="text" placeholder="CITY [cite: 5]">
+                </div>
+                <div style="flex: 1;">
+                    [cite_start]<input type="text" placeholder="STATE & ZIP [cite: 6]">
+                </div>
+            </div>
+            [cite_start]<label for="apn">APN: (Assessor's Parcel Number) [cite: 7]</label>
+            <input type="text" id="apn">
+        </div>
+
+        [cite_start]<h1 class="header">GRANT DEED [cite: 9]</h1>
+
+        <div class="section">
+            [cite_start]<p>THE UNDERSIGNED GRANTOR(S) DECLARE(S) [cite: 10]</p>
+            <div class="field-group">
+                <div style="flex: 1;">
+                    [cite_start]<label for="dtt">DOCUMENTARY TRANSFER TAX is $ [cite: 11]</label>
+                    <input type="text" id="dtt">
+                </div>
+                <div style="flex: 1;">
+                    [cite_start]<label for="city-tax">CITY TAX $ [cite: 12]</label>
+                    <input type="text" id="city-tax">
+                </div>
+            </div>
+            <div class="field-group">
+                <input type="checkbox" id="full-value-conveyed">
+                [cite_start]<label for="full-value-conveyed" style="display: inline;">computed on full value of property conveyed, or [cite: 14]</label>
+            </div>
+            <div class="field-group">
+                <input type="checkbox" id="full-value-encumbrances">
+                [cite_start]<label for="full-value-encumbrances" style="display: inline;">computed on full value of items or encumbrances remaining at time of sale [cite: 15]</label>
+            </div>
+            <div class="field-group">
+                <input type="checkbox" id="unincorporated-area">
+                [cite_start]<label for="unincorporated-area" style="display: inline;">Unincorporated area [cite: 15]</label>
+                <input type="checkbox" id="city-of">
+                <label for="city-of" style="display: inline;">City of</label>
+                [cite_start]<input type="text" style="width: 150px; margin-left: 5px;" placeholder="City Name [cite: 15]">
+            </div>
+        </div>
+
+        <div class="section">
+            [cite_start]<p>FOR A FULL VALUABLE CONSIDERATION, receipt of which is hereby acknowledged, [cite: 16]</p>
+
+            <div class="field-group">
+                <div style="flex: 1;">
+                    [cite_start]<label for="grantor">Grantor(s) Name(s) or Entity [cite: 17]</label>
+                    <input type="text" id="grantor">
+                    <p style="text-align: center; margin-top: -10px;">GRANT(s) to</p>
+                </div>
+                <div style="flex: 1;">
+                    [cite_start]<label for="grantee">Grantee(s) Name(s) or Entity [cite: 18]</label>
+                    <input type="text" id="grantee">
+                </div>
+            </div>
+
+            [cite_start]<p style="margin-top: 15px;">the following described real property in the City of <input type="text" style="width: 150px; display: inline;" placeholder="City [cite: 19][cite_start]">, County of <input type="text" style="width: 150px; display: inline;" placeholder="County [cite: 28][cite_start]">, State of California: [cite: 29]</p>
+
+            <label for="property-description">Property Legal Description</label>
+            <textarea id="property-description" rows="5"></textarea>
+
+            <div class="field-group" style="margin-top: 20px;">
+                <div>
+                    [cite_start]<label for="date-signed">Dated: [cite: 20]</label>
+                    <input type="date" id="date-signed">
+                </div>
+                <div>
+                    <label for="grantor-signature">Grantor Signature</label>
+                    <input type="text" id="grantor-signature" placeholder="Signature Line">
+                </div>
+            </div>
+            <div class="field-group">
+                <div style="flex: 1;">
+                    </div>
+                <div style="flex: 1;">
+                    <label for="grantor-print-name">Grantor Printed Name</label>
+                    <input type="text" id="grantor-print-name">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="section">
+            [cite_start]<h3 class="section-title">CERTIFICATE OF ACKNOWLEDGMENT (Notary Section) [cite: 21]</h3>
+            [cite_start]<p>STATE OF CALIFORNIA [cite: 22][cite_start], COUNTY OF <input type="text" style="width: 150px; display: inline;" placeholder="County Name [cite: 22]"></p>
+            [cite_start]<p>On <input type="date" style="width: 120px; display: inline;" placeholder="Date [cite: 24][cite_start]"> before me, <input type="text" style="width: 250px; display: inline;" placeholder="Notary Name [cite: 25, 30][cite_start]">, personally appeared <input type="text" style="width: 250px; display: inline;" placeholder="Signer(s) Name(s) [cite: 30]"></p>
+            <p style="margin-top: 10px; font-size: 0.9em;">
+                [cite_start]who proved to me on the basis of satisfactory evidence to be the person(s) whose name(s) is/are subscribed to the within instrument and acknowledged to me that he/she/they executed the same in his/their/her authorized capacity (ies), and that by his/her/their signatures(s) on the instrument the person(s), or the entity upon behalf of which the person(s) acted, executed the instrument. [cite: 31]
+            </p>
+            <p style="font-size: 0.9em;">
+                [cite_start]I certify under PENALTY OF PERJURY under the laws of the State of California that the foregoing paragraph is true and correct. [cite: 32]
+            </p>
+            [cite_start]<p>WITNESS my hand and official seal. [cite: 33]</p>
+
+            <div class="field-group" style="margin-top: 20px;">
+                <div style="flex: 1;">
+                    [cite_start]<label for="notary-signature">Notary Signature [cite: 34]</label>
+                    <input type="text" id="notary-signature" placeholder="Signature Line">
+                </div>
+                <div style="flex: 1; text-align: center; border: 1px solid #000; height: 50px; line-height: 50px;">
+                    (SEAL) [cite_start][cite: 35]
+                </div>
+            </div>
+        </div>
+
+        [cite_start]<p class="header" style="font-weight: bold; margin-top: 20px;">MAIL TAX STATEMENT TO ADDRESS AS SHOWN ABOVE [cite: 36]</p>
+
+    </form>
+</div>
+
+</body>
+</html>
