@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DockingWare - Product Details</title>
+<!-- BEGIN: External Scripts -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#ff6b00',
+              dark: '#121212',
+              card: '#1e1e1e',
+              sidebar: '#1a1a1a',
+              input: '#2a2a2a',
+              hover: '#333333',
+              accent: '#00d4ff',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- END: External Scripts -->
+<style data-purpose="custom-scrollbar">
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1a1a1a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #333;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body class="bg-brand-dark text-gray-300 h-full flex flex-col md:flex-row overflow-hidden font-sans">
+<!-- BEGIN: Sidebar -->
+<aside class="w-64 bg-brand-sidebar flex-shrink-0 flex flex-col border-r border-gray-800 hidden md:flex" data-purpose="main-navigation">
+<div class="p-6 flex items-center gap-2">
+<div class="w-10 h-10 bg-brand-orange rounded flex items-center justify-center text-white font-bold text-xl">
+<img alt="Logo" class="rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVLyGHaj0f26BSeX245pX0ZTmgYm8ZRAi6B-4Mw0iLmWuzmssXc9ACtd8XyT5ciFVX3YFM3XTMYMzW0lFM10LVLFGdc6DYXeU2hnTqKETrEuQbn6qQjtMMtAlITnxzxfAgsHSX8bStZ0doPZfk-twcVSzeepK1poJWlq3EFtm2FyKANXfHkjdx0GpjEm4Gltw1bBha01YTpJtR_9khn981_S9z-V40AeruRxvBILtXA9jOx8aERMTL6gS1s1jfpFjrTAeFoG-mxGo"/>
+</div>
+<h1 class="text-brand-orange font-bold text-xl tracking-wider">DOCKINGWARE</h1>
+</div>
+<nav class="flex-1 px-4 overflow-y-auto pb-4 space-y-6">
+<!-- Main Menu Section -->
+<div>
+<p class="text-xs font-semibold text-gray-500 mb-2 uppercase px-2">Main Menu</p>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-brand-hover transition-colors" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Dashboard
+        </a>
+</div>
+<!-- Inventory Section -->
+<div>
+<p class="text-xs font-semibold text-gray-500 mb-2 uppercase px-2">Inventory</p>
+<div class="space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 bg-brand-card rounded-lg text-white" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            Inventory
+          </a>
+<div class="pl-11 py-2 space-y-2 text-sm">
+<a class="block text-white" href="#">Products</a>
+<div class="pl-4 space-y-2 text-gray-400">
+<a class="block hover:text-white" href="#">Products List</a>
+</div>
+<a class="block hover:text-white" href="#">Asset Tracking</a>
+<a class="block hover:text-white flex items-center gap-2" href="#">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+              Transfer
+            </a>
+<a class="block hover:text-white flex items-center gap-2" href="#">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+              Inv Adjustment
+            </a>
+<a class="block hover:text-white flex items-center gap-2" href="#">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+              Other Setting
+            </a>
+</div>
+</div>
+</div>
+<!-- Sales Section -->
+<div>
+<p class="text-xs font-semibold text-gray-500 mb-2 uppercase px-2">Sales</p>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-brand-hover" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Sales
+        </a>
+</div>
+<!-- Purchase Section -->
+<div>
+<p class="text-xs font-semibold text-gray-500 mb-2 uppercase px-2">Purchase</p>
+<div class="space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-brand-hover" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            Purchase
+          </a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-brand-hover" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            Receiving
+          </a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-brand-hover" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            Shipping
+          </a>
+</div>
+</div>
+</nav>
+</aside>
+<!-- END: Sidebar -->
+<!-- BEGIN: Main Content Area -->
+<main class="flex-1 flex flex-col min-w-0 overflow-y-auto">
+<!-- BEGIN: Top Bar -->
+<header class="bg-brand-dark p-4 flex items-center justify-between sticky top-0 z-10 border-b border-gray-800 md:border-none">
+<div class="flex items-center gap-2 text-sm text-gray-500">
+<span>Home</span>
+<span>&gt;</span>
+<span>Inventory</span>
+<span>&gt;</span>
+<span class="text-brand-accent">Products</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="hidden sm:inline">Welcome, <span class="text-white font-bold">Admin</span></span>
+<button class="relative p-2 bg-brand-input rounded-full">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path></svg>
+<span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+</button>
+<button class="p-2 bg-brand-input rounded-full">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+</button>
+<button class="w-8 h-8 rounded-full overflow-hidden border border-gray-600">
+<img alt="User Profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfmIdkklyGvLNfSKMMa1k_hribpG1egPghdtQqaGK9QW-qv774l-1tNpSCYqWyxIireaNrqLETSNiMPx2pZHkuyebV7OVGeIIcTAOXpUZVNfd0da4iBVbZeUTroKg8-I9TJ7iATm_WyngiwSUN_6PjRRmrblB5Qv4ggJ1zWM_BaICuEsSXkxPWxLEvzorqK-prLiY1S43VmNiDb6Yyk2-Qq8aiymB9G86VwZ3mdS0y8CoIR_SEZG_PQL1IueUyXMf_7DKP1qNnsyw"/>
+</button>
+</div>
+</header>
+<!-- END: Top Bar -->
+<!-- BEGIN: Page Content -->
+<div class="p-6 space-y-6">
+<!-- Title Section -->
+<div class="flex items-center gap-3">
+<div class="p-2 bg-teal-500/20 rounded">
+<svg class="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h2 class="text-2xl font-bold text-white">Product Details</h2>
+</div>
+<!-- BEGIN: Tabs -->
+<div class="flex items-center gap-1 border-b border-gray-800 overflow-x-auto whitespace-nowrap" data-purpose="content-tabs">
+<button class="flex items-center gap-2 px-6 py-3 border-b-2 border-teal-500 text-teal-500 font-medium bg-teal-500/5">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Inventory
+        </button>
+<button class="flex items-center gap-2 px-6 py-3 text-gray-500 hover:text-gray-300">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Item Details
+        </button>
+<button class="flex items-center gap-2 px-6 py-3 text-gray-500 hover:text-gray-300">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Sales Orders
+        </button>
+<button class="flex items-center gap-2 px-6 py-3 text-gray-500 hover:text-gray-300">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Supplier
+        </button>
+<button class="flex items-center gap-2 px-6 py-3 text-gray-500 hover:text-gray-300">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Purchases
+        </button>
+<button class="flex items-center gap-2 px-6 py-3 text-gray-500 hover:text-gray-300">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Receiving
+        </button>
+<button class="flex items-center gap-2 px-6 py-3 text-gray-500 hover:text-gray-300">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Inventory Tracking
+        </button>
+</div>
+<!-- END: Tabs -->
+<!-- BEGIN: Toolbar -->
+<div class="flex flex-wrap items-center gap-4 py-2">
+<div class="flex-1 min-w-[300px] relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+<input class="w-full bg-brand-input border-none rounded-lg py-2 pl-10 text-gray-300 focus:ring-1 focus:ring-teal-500" placeholder="Search by Item, name, SKU..." type="text"/>
+</div>
+<div class="flex items-center gap-1 bg-brand-input rounded-lg px-2 py-1">
+<button class="p-1 hover:bg-gray-700 rounded"><svg class="w-4 h-4" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg></button>
+<span class="text-sm px-2">1 of 160</span>
+<button class="p-1 hover:bg-gray-700 rounded"><svg class="w-4 h-4" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" fill-rule="evenodd"></path></svg></button>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="bg-teal-500 hover:bg-teal-600 text-black font-bold px-4 py-2 rounded-lg flex items-center gap-2">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 20 20"><path d="M7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V4a1 1 0 10-2 0v7.586l-1.293-1.293z"></path><path d="M5 17a2 2 0 01-2-2V7a2 2 0 012-2h1a1 1 0 010 2H5v8h10V7h-1a1 1 0 110-2h1a2 2 0 012 2v8a2 2 0 01-2 2H5z"></path></svg>
+            Save
+          </button>
+<button class="bg-brand-input hover:bg-brand-hover px-4 py-2 rounded-lg flex items-center gap-2">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 20 20"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path></svg>
+            Edit
+          </button>
+<button class="bg-brand-input hover:bg-brand-hover px-4 py-2 rounded-lg flex items-center gap-2">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M5 4v3H4a2 2 0 00-2 2v3a2 2 0 002 2h1v2a2 2 0 002 2h6a2 2 0 002-2v-2h1a2 2 0 002-2V9a2 2 0 00-2-2h-1V4a2 2 0 00-2-2H7a2 2 0 00-2 2zm8 0H7v3h6V4zm0 8H7v4h6v-4z" fill-rule="evenodd"></path></svg>
+            Print
+          </button>
+<button class="bg-brand-input hover:bg-brand-hover px-4 py-2 rounded-lg flex items-center gap-2">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 20 20"><path d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"></path><path d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"></path></svg>
+            Report
+          </button>
+<div class="flex items-center gap-2 px-3 py-2 bg-green-900/20 text-green-500 rounded-lg border border-green-500/30">
+<span class="w-2 h-2 bg-green-500 rounded-full"></span>
+<span class="text-sm font-medium">Active</span>
+</div>
+</div>
+</div>
+<!-- END: Toolbar -->
+<!-- BEGIN: Product Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- BEGIN: Left Column (Image & Info) -->
+<div class="lg:col-span-4 space-y-6">
+<!-- Image Card -->
+<div class="bg-brand-card p-8 rounded-xl border border-gray-800 flex items-center justify-center aspect-square md:aspect-auto">
+<div class="bg-white p-4 rounded shadow-2xl">
+<img alt="Duracell Batteries" class="max-w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChh8JGYVdCCu6oq8M7R3DvEG_GpxJqCIfwvbubppFn-RILzyGM2KmMpP8XaECuWEU34ZNO0loL32nkMeUibOyEqjwVUTy1MKuhpgSF472vNoJZOJPgclCA1454RyoucDCv-qciYtFwGAHnxpKLKZrs9nbLtvppUaCtGQIrMyTytzU0VCpUu1wj-SFm5Wh78Rj-fHotLRLt23iILVsM0ajJXdsMqr-GzEdIx-eT7VMMqp0EUH9yjbkKccdFiSGpuY1eZLpESt1C5ug"/>
+</div>
+</div>
+<!-- Basic Information -->
+<div class="bg-brand-card rounded-xl border border-gray-800 overflow-hidden">
+<div class="bg-brand-input/30 p-4 border-b border-gray-800 flex items-center gap-2">
+<div class="p-1 bg-brand-accent/20 rounded">
+<svg class="w-4 h-4 text-brand-accent" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" fill-rule="evenodd"></path></svg>
+</div>
+<h3 class="font-bold">Basic Information</h3>
+</div>
+<div class="p-4 space-y-4 text-sm">
+<div class="flex justify-between">
+<span class="text-gray-500">SKU#</span>
+<span class="text-white">DUR-AA2</span>
+</div>
+<div class="flex justify-between">
+<span class="text-gray-500">Item#</span>
+<span class="text-white text-right">DURAA2-01</span>
+</div>
+<div class="flex justify-between">
+<span class="text-gray-500">Vendor Item#</span>
+<span class="text-white text-right">NK-23300-SRT</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-500 leading-tight">Barcode<br/>Inner#</span>
+<span class="text-white font-mono">881982829389</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-500 leading-tight">Barcode<br/>Pack#</span>
+<span class="text-white font-mono">847385993785</span>
+</div>
+<div class="flex justify-between">
+<span class="text-gray-500">Barcode UPC#</span>
+<span class="text-white font-mono">859873859388</span>
+</div>
+</div>
+</div>
+</div>
+<!-- END: Left Column -->
+<!-- BEGIN: Right Column (Stock & Details) -->
+<div class="lg:col-span-8 space-y-6">
+<!-- BEGIN: Stock Overview Cards -->
+<div class="bg-brand-card p-6 rounded-xl border border-gray-800 space-y-4">
+<h3 class="text-lg font-bold">Stock</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 gap-4">
+<!-- Card 1 -->
+<div class="bg-brand-input p-4 rounded-lg border border-gray-700 text-center">
+<p class="text-green-500 text-xs font-semibold mb-1">On Hand</p>
+<p class="text-white font-bold">13,500 pcs</p>
+<p class="text-green-500 text-[10px]">5,000 cases</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-brand-input p-4 rounded-lg border border-gray-700 text-center">
+<p class="text-orange-500 text-xs font-semibold mb-1">On Orders</p>
+<p class="text-white font-bold">2,500 pcs</p>
+<p class="text-orange-500 text-[10px]">50 cases</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-brand-input p-4 rounded-lg border border-gray-700 text-center">
+<p class="text-yellow-500 text-xs font-semibold mb-1">On Way</p>
+<p class="text-white font-bold">22,500 pcs</p>
+<p class="text-yellow-500 text-[10px]">2,500 cases</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-brand-input p-4 rounded-lg border border-gray-700 text-center">
+<p class="text-orange-400 text-xs font-semibold mb-1">On Storage</p>
+<p class="text-white font-bold">59,000 pcs</p>
+<p class="text-orange-400 text-[10px]">1,211 cases</p>
+</div>
+<!-- Card 5 (MultiWarehouse) -->
+<div class="bg-brand-input p-4 rounded-lg border border-gray-700 text-center col-span-2 md:col-span-1">
+<p class="text-teal-400 text-xs font-semibold mb-1">MultiWarehouse</p>
+<p class="text-white font-bold">265,000 pcs</p>
+<p class="text-teal-400 text-[10px]">35,000 cases</p>
+</div>
+</div>
+</div>
+<!-- END: Stock Overview -->
+<!-- BEGIN: Product Detailed Data -->
+<div class="bg-brand-card rounded-xl border border-gray-800">
+<div class="p-6 border-b border-gray-800">
+<h3 class="text-lg font-bold">Product Details</h3>
+</div>
+<!-- Description & Pricing Row -->
+<div class="p-4 grid grid-cols-1 md:grid-cols-3 gap-6 border-b border-gray-800">
+<div class="md:col-span-1">
+<p class="text-xs text-gray-500 uppercase tracking-tight mb-1">Description:</p>
+<p class="text-sm text-white">Batteries Alkaline AA2, Pack 2 B</p>
+</div>
+<div>
+<p class="text-xs text-gray-500 uppercase tracking-tight mb-1">Price Retail:</p>
+<p class="text-sm text-white">$ 0.50</p>
+</div>
+<div>
+<p class="text-xs text-gray-500 uppercase tracking-tight mb-1">Price WholeSale:</p>
+<p class="text-sm text-white">$ 0.80</p>
+</div>
+</div>
+<!-- Unit Details Row -->
+<div class="p-4 grid grid-cols-2 md:grid-cols-5 gap-6 border-b border-gray-800 items-center">
+<div class="font-bold text-gray-300">Unit Details</div>
+<div>
+<p class="text-xs text-gray-500 uppercase tracking-tight mb-1">Master Case:</p>
+<p class="text-sm text-white font-medium">10</p>
+</div>
+<div>
+<p class="text-xs text-gray-500 uppercase tracking-tight mb-1">Inner Box:</p>
+<p class="text-sm text-white font-medium">4</p>
+</div>
+<div>
+<p class="text-xs text-gray-500 uppercase tracking-tight mb-1">Pieces:</p>
+<p class="text-sm text-white font-medium">12</p>
+</div>
+<div>
+<p class="text-xs text-gray-500 uppercase tracking-tight mb-1">Pack:</p>
+<p class="text-sm text-white font-medium">120</p>
+</div>
+</div>
+<!-- Category Row -->
+<div class="p-4 grid grid-cols-2 md:grid-cols-5 gap-6 border-b border-gray-800 items-center">
+<div class="font-bold text-gray-300">Category</div>
+<div>
+<p class="text-xs text-gray-500 uppercase tracking-tight mb-1">Main Categories:</p>
+<p class="text-sm text-white font-medium">Electronic</p>
+</div>
+<div>
+<p class="text-xs text-gray-500 uppercase tracking-tight mb-1">SubCategories:</p>
+<p class="text-sm text-white font-medium">Batteries</p>
+</div>
+<div>
+<p class="text-xs text-gray-500 uppercase tracking-tight mb-1">Product Category:</p>
+<p class="text-sm text-white font-medium">Alkaline</p>
+</div>
+<div>
+<p class="text-xs text-gray-500 uppercase tracking-tight mb-1">SubCategory:</p>
+<p class="text-sm text-white font-medium">AA</p>
+</div>
+</div>
+<!-- Brand Row -->
+<div class="p-4 grid grid-cols-2 md:grid-cols-5 gap-6 items-center">
+<div class="font-bold text-gray-300">Brand Name</div>
+<div class="md:col-span-2">
+<p class="text-xs text-gray-500 uppercase tracking-tight mb-1">Brand Name:</p>
+<p class="text-sm text-white font-medium">Duracell</p>
+</div>
+<div class="md:col-span-2">
+<p class="text-xs text-gray-500 uppercase tracking-tight mb-1">SubBrand Name:</p>
+<p class="text-sm text-white font-medium">PowerBoost</p>
+</div>
+</div>
+</div>
+<!-- END: Product Detailed Data -->
+</div>
+<!-- END: Right Column -->
+</div>
+<!-- END: Product Grid Layout -->
+</div>
+<!-- END: Page Content -->
+</main>
+<!-- END: Main Content Area -->
+</body></html>
