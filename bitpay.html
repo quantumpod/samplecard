@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Bitpay Business System | Tecnología para negocios</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Variables de color por tema */
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --text-primary: #1e2a3a;
+            --text-secondary: #4a5568;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --orange: #FF6B35;
+            --azteca: #006847;
+        }
+
+        body.dark {
+            --bg-primary: #121212;
+            --bg-secondary: #1e2a2e;
+            --text-primary: #f0f0f0;
+            --text-secondary: #cbd5e0;
+            --card-bg: #1e2a2e;
+            --border: #334155;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        /* Botón tema */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--orange);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Contenedor general */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-secondary);
+            padding: 20px 0;
+            border-bottom: 3px solid var(--orange);
+        }
+
+        .logo h1 {
+            color: var(--orange);
+            font-size: 1.8rem;
+        }
+        .logo span {
+            color: var(--azteca);
+        }
+        .logo p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--orange);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--text-secondary);
+        }
+        .btn {
+            background: var(--orange);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-azteca {
+            background: var(--azteca);
+            margin-left: 15px;
+        }
+        .btn:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        /* Servicios */
+        .servicios {
+            background: var(--bg-secondary);
+            padding: 60px 0;
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 30px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .card h3 {
+            color: var(--orange);
+            margin-bottom: 15px;
+        }
+        .card p {
+            color: var(--text-secondary);
+        }
+
+        /* Por qué */
+        .porque {
+            padding: 60px 0;
+            text-align: center;
+        }
+        .beneficios {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .beneficio {
+            background: var(--card-bg);
+            border-left: 5px solid var(--orange);
+            padding: 20px;
+            width: 280px;
+            text-align: left;
+            border-radius: 10px;
+        }
+
+        /* Testimonios */
+        .testimonios {
+            background: var(--bg-secondary);
+            padding: 60px 0;
+            text-align: center;
+        }
+        .testimonio {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px auto;
+            max-width: 600px;
+            font-style: italic;
+            border: 1px solid var(--border);
+        }
+
+        /* Formulario */
+        .contacto {
+            padding: 60px 0;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+        button[type="submit"] {
+            background: var(--azteca);
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        /* Chat flotante */
+        .chat-flotante {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: var(--azteca);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            font-size: 28px;
+            transition: 0.2s;
+        }
+        .chat-flotante:hover {
+            background: var(--orange);
+            transform: scale(1.05);
+        }
+        .chat-box {
+            position: fixed;
+            bottom: 100px;
+            right: 25px;
+            width: 280px;
+            background: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            display: none;
+            flex-direction: column;
+            z-index: 1001;
+            border: 1px solid var(--orange);
+        }
+        .chat-header {
+            background: var(--orange);
+            padding: 12px;
+            border-radius: 15px 15px 0 0;
+            color: white;
+            font-weight: bold;
+        }
+        .chat-body {
+            padding: 15px;
+            min-height: 150px;
+            font-size: 0.9rem;
+        }
+        .chat-input {
+            display: flex;
+            border-top: 1px solid var(--border);
+        }
+        .chat-input input {
+            flex: 1;
+            border: none;
+            padding: 10px;
+            border-radius: 0 0 0 15px;
+        }
+        .chat-input button {
+            background: var(--azteca);
+            border: none;
+            color: white;
+            padding: 0 15px;
+            border-radius: 0 0 15px 0;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 1.8rem; }
+            .btn-azteca { margin-left: 0; margin-top: 10px; display: inline-block; }
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle">🌙 Modo oscuro</button>
+
+    <!-- Chat flotante -->
+    <div class="chat-flotante" id="chatIcon">💬</div>
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">Bitpay Business System</div>
+        <div class="chat-body" id="chatBody">
+            ¡Hola! ¿En qué podemos ayudarte?
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Escribe tu mensaje...">
+            <button id="chatSend">➤</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Bitpay <span>Business System</span></h1>
+                <p>Tecnología para negocios modernos en México</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Sistemas empresariales sin complicaciones</h2>
+            <p>Automatización, gestión de datos y soluciones tech para tu empresa.<br>Con respaldo local y dominio .com.mx</p>
+            <a class="btn">📊 Solicita demo</a>
+            <a class="btn btn-azteca">🚀 Empieza ahora</a>
+        </div>
+    </section>
+
+    <section class="servicios">
+        <div class="container">
+            <h2 style="text-align:center; color:var(--orange);">Nuestros servicios</h2>
+            <div class="grid">
+                <div class="card"><h3>💻 Sistemas a la medida</h3><p>Software adaptado a tu negocio</p></div>
+                <div class="card"><h3>⚙️ Automatización</h3><p>Optimiza procesos internos</p></div>
+                <div class="card"><h3>📊 Datos inteligentes</h3><p>Analítica para tomar decisiones</p></div>
+                <div class="card"><h3>🛠️ Soporte técnico</h3><p>Atención personalizada</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="porque">
+        <div class="container">
+            <h2 style="color:var(--orange);">¿Por qué Bitpay Business System?</h2>
+            <div class="beneficios">
+                <div class="beneficio">✅ Tecnología confiable y escalable</div>
+                <div class="beneficio">🇲🇽 Enfoque en PYMES mexicanas</div>
+                <div class="beneficio">🌐 Dominio .com.mx - presencia local</div>
+                <div class="beneficio">🔒 Sin temas financieros, solo soluciones tech</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonios">
+        <div class="container">
+            <h2 style="color:var(--orange);">Lo que dicen nuestros clientes</h2>
+            <div class="testimonio">
+                “Bitpay Business System transformó nuestra operación. Ahora todo está automatizado.”
+                <br>— Laura M., CDMX
+            </div>
+            <div class="testimonio">
+                “El soporte es excelente y las herramientas justo lo que necesitábamos.”
+                <br>— Carlos R., Guadalajara
+            </div>
+        </div>
+    </section>
+
+    <section class="contacto">
+        <div class="container">
+            <h2 style="text-align:center; color:var(--orange);">Contáctanos</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="tel" placeholder="Teléfono">
+                <textarea rows="4" placeholder="¿Cómo podemos ayudarte?"></textarea>
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Bitpay Business System - Tecnología para negocios</p>
+        <p>contacto@bitpay.com.mx | Aviso de privacidad</p>
+    </footer>
+
+    <script>
+        // Modo claro/oscuro
+        const toggleBtn = document.getElementById('themeToggle');
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            if(document.body.classList.contains('dark')) {
+                toggleBtn.textContent = '☀️ Modo claro';
+            } else {
+                toggleBtn.textContent = '🌙 Modo oscuro';
+            }
+        });
+
+        // Chat flotante
+        const chatIcon = document.getElementById('chatIcon');
+        const chatBox = document.getElementById('chatBox');
+        chatIcon.addEventListener('click', () => {
+            if(chatBox.style.display === 'flex') {
+                chatBox.style.display = 'none';
+            } else {
+                chatBox.style.display = 'flex';
+            }
+        });
+
+        const chatSend = document.getElementById('chatSend');
+        const chatInput = document.getElementById('chatInput');
+        const chatBody = document.getElementById('chatBody');
+
+        chatSend.addEventListener('click', () => {
+            const msg = chatInput.value.trim();
+            if(msg !== '') {
+                const userMsg = document.createElement('div');
+                userMsg.style.marginBottom = '8px';
+                userMsg.style.textAlign = 'right';
+                userMsg.style.color = 'var(--orange)';
+                userMsg.innerHTML = `<strong>Tú:</strong> ${msg}`;
+                chatBody.appendChild(userMsg);
+                chatInput.value = '';
+                // Respuesta automática
+                setTimeout(() => {
+                    const botMsg = document.createElement('div');
+                    botMsg.style.marginBottom = '8px';
+                    botMsg.innerHTML = `<strong>Bitpay:</strong> Gracias, en breve un asesor te contactará.`;
+                    chatBody.appendChild(botMsg);
+                    chatBody.scrollTop = chatBody.scrollHeight;
+                }, 500);
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }
+        });
+
+        chatInput.addEventListener('keypress', (e) => {
+            if(e.key === 'Enter') chatSend.click();
+        });
+
+        // Prevenir envío real del formulario
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('✅ Mensaje enviado (demo). Pronto te contactaremos.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
